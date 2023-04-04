@@ -3,7 +3,7 @@ FROM php:8.2-apache
 RUN a2enmod rewrite
 
 RUN apt-get update \
-  && apt-get install -y libzip-dev git wget libpq-dev --no-install-recommends \
+  && apt-get install -y libzip-dev git libpq-dev unzip wget --no-install-recommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
